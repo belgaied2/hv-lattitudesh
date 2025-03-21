@@ -18,7 +18,7 @@ install:
     interfaces:
     - name: enp1s0f0
     method: static
-    ip: 177.54.147.62
+    ip: 189.1.172.30
     subnet_mask: 255.255.255.0
     gateway: 177.54.147.1
   device: /dev/sda
