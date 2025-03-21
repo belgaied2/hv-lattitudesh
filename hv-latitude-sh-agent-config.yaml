@@ -1,0 +1,28 @@
+scheme_version: 1
+server_url: https://177.54.147.120:443
+token: momotoken
+os:
+  hostname: c2-small-x86-sao-2 # Set a hostname. This can be omitted if DHCP server offers hostnames.
+  ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrO13CUFxoQ+DJQ6tDqKorbKqC0QGQWSmPEsYjLUKF0mbpk1LLiiEDhM1enEXJ7RXf0De5n6hnYeVgo1h2XiUmhfOOYhF23/GhLaFmMsu5heLH969IZpqh/17t/r//pONxt2mnkcCMmywptZ0PLXPjYfOIE8y87Q5gFw5APFmwvEUn0LxCK1odlDXWhedwLOtYjfFLNAowMaXDKvqZsPYow3EizDN64kIGwpIkBscqdZqi+vCBfFsr4tJg0jT2iVYu8tbf7sIK9y0on6/fQ1t9pAPCJbbSMBObns26ZLP2Ym0tXmgbCMHDEnWkjLUYr5XqOpc7f3SkYGb/JkNV5FmN
+  password: $1$nucnMwa.$Q04ug1fxHu3YJH20k/aul0
+  ntp_servers:
+  - 0.suse.pool.ntp.org
+  - 1.suse.pool.ntp.org
+  dns_nameservers:
+    - 8.8.8.8
+    - 1.1.1.1
+install:
+  mode: join
+  management_interface:
+    interfaces:
+    - name: enp1s0f0
+    method: static
+    ip: 177.54.147.62
+    subnet_mask: 255.255.255.0
+    gateway: 177.54.147.1
+  device: /dev/sda
+  iso_url: https://releases.rancher.com/harvester/v1.4.0/harvester-v1.4.0-amd64.iso
+  tty: ttyS1,115200n8 # For machines without a VGA console
+  vip: 177.54.147.120
+  vip_mode: static # Or static
