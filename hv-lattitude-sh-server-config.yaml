@@ -15,7 +15,7 @@ install:
   mode: create
   management_interface:
     interfaces:
-    - name: enp1s0f
+    - name: enp1s0f0
     default_route: true
     method: static
     bond_options:
