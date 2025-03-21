@@ -16,12 +16,9 @@ install:
   management_interface:
     interfaces:
     - name: enp1s0f0
-    default_route: true
     method: static
-    bond_options:
-    miimon: 100
     ip: 177.54.147.61
-    subnet_mask: 177.54.147.0/24
+    subnet_mask: 255.255.255.0
     gateway: 177.54.147.1
   device: /dev/sda
   iso_url: https://releases.rancher.com/harvester/v1.4.0/harvester-v1.4.0-amd64.iso
